@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A0A0F"
+    android:padding="24dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📡"
+            android:textSize="26sp"
+            android:layout_marginEnd="10dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AlwanMart SMS"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#F1F5F9"/>
+            <TextView
+                android:id="@+id/serverUrl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="alawanmart.online"
+                android:textSize="11sp"
+                android:textColor="#7C3AED"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚙"
+            android:textSize="22sp"
+            android:textColor="#475569"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+    <!-- Status Box -->
+    <LinearLayout
+        android:id="@+id/statusBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#13131C"
+        android:padding="24dp"
+        android:gravity="center"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:id="@+id/statusIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚫"
+            android:textSize="48sp"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/statusTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monitoring Off"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#94A3B8"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/statusSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tap the toggle below to start"
+            android:textSize="12sp"
+            android:textColor="#475569"/>
+    </LinearLayout>
+
+    <!-- THE ONLY TOGGLE -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#13131C"
+        android:padding="18dp"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="24dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SMS Monitoring"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#F1F5F9"
+                android:layout_marginBottom="3dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Read payment SMS 24/7"
+                android:textSize="11sp"
+                android:textColor="#64748B"/>
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/toggleMonitoring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- Stats row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#13131C"
+            android:padding="14dp"
+            android:gravity="center"
+            android:layout_marginEnd="6dp">
+            <TextView
+                android:id="@+id/statTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#10B981"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total SMS"
+                android:textSize="10sp"
+                android:textColor="#64748B"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#13131C"
+            android:padding="14dp"
+            android:gravity="center"
+            android:layout_marginEnd="6dp">
+            <TextView
+                android:id="@+id/statMatched"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#7C3AED"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Matched"
+                android:textSize="10sp"
+                android:textColor="#64748B"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#13131C"
+            android:padding="14dp"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/statToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#F97316"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today"
+                android:textSize="10sp"
+                android:textColor="#64748B"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Info note -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔒 Running silently in background. Reads JazzCash/EasyPaisa/Bank SMS and sends to your store automatically."
+        android:textSize="11sp"
+        android:textColor="#334155"
+        android:background="#13131C"
+        android:padding="12dp"
+        android:lineSpacingMultiplier="1.5"/>
+
+</LinearLayout>

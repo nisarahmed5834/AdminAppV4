@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0F">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="32dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📡"
+                android:textSize="28sp"
+                android:layout_marginEnd="12dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AlwanMart SMS"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#F1F5F9"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment SMS Monitor"
+                    android:textSize="12sp"
+                    android:textColor="#64748B"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Step 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="6dp">
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="1"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#F1F5F9"
+                android:background="#7C3AED"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter Server URL"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#F1F5F9"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/inputUrl"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="https://alawanmart.online"
+            android:inputType="textUri"
+            android:textColor="#F1F5F9"
+            android:textColorHint="#475569"
+            android:background="#13131C"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Step 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="6dp">
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="2"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#F1F5F9"
+                android:background="#7C3AED"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter Admin Token"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#F1F5F9"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Copy from Admin → SMS App page"
+                    android:textSize="11sp"
+                    android:textColor="#64748B"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/inputToken"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Paste token here..."
+            android:inputType="textVisiblePassword"
+            android:textColor="#7C3AED"
+            android:textColorHint="#475569"
+            android:background="#13131C"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnTest"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="Test Connection"
+            android:backgroundTint="#1E293B"
+            android:textColor="#7C3AED"
+            android:textSize="13sp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Step 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="6dp">
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="3"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#F1F5F9"
+                android:background="#7C3AED"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Allow SMS Permission"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#F1F5F9"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="When prompted: Allow SMS permission\nFor Infinix: Settings → Battery → App Battery Management → AlwanMart SMS → No Restrictions"
+            android:textSize="12sp"
+            android:textColor="#64748B"
+            android:lineSpacingMultiplier="1.5"
+            android:background="#13131C"
+            android:padding="12dp"
+            android:layout_marginBottom="28dp"/>
+
+        <!-- Save button -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Save &amp; Start Monitoring"
+            android:backgroundTint="#7C3AED"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/testResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="13sp"
+            android:gravity="center"
+            android:padding="8dp"/>
+
+    </LinearLayout>
+</ScrollView>
